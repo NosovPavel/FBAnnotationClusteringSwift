@@ -10,16 +10,16 @@ import Foundation
 
 struct FBBoundingBox {
 	
-    let x0, y0, xf, yf: CGFloat
+    let x0, y0, xf, yf: Float
 }
 
 extension FBBoundingBox {
 	
-	var xMid: CGFloat {
+	var xMid: Float {
 		return (xf + x0) / 2.0
 	}
 
-	var yMid: CGFloat {
+	var yMid: Float {
 		return (yf + y0) / 2.0
 	}
 

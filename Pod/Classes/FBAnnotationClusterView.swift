@@ -68,7 +68,8 @@ public class FBAnnotationClusterView : MKAnnotationView {
 				break
 			case .SolidColor(let sideLength, let color):
 				backgroundColor	= color
-				frame = CGRect(origin: frame.origin, size: CGSize(width: sideLength, height: sideLength))
+				frame = CGRect(origin: frame.origin, size: CGSize(width: CGFloat(sideLength), height: CGFloat(sideLength)))
+                    //CGRect(origin: frame.origin, size: CGSize (width: sideLength, height: sideLength))
 				break
 			}
 

@@ -21,12 +21,12 @@ extension FBBoundingBox {
 		let minLon = topLeft.longitude
 		let maxLon = bottomRight.longitude
 
-		self.init(x0: CGFloat(minLat), y0: CGFloat(minLon), xf: CGFloat(maxLat), yf: CGFloat(maxLon))
+		self.init(x0: Float(minLat), y0: Float(minLon), xf: Float(maxLat), yf: Float(maxLon))
 	}
 
 	func contains(coordinate: CLLocationCoordinate2D) -> Bool {
-		let containsX = (x0 <= CGFloat(coordinate.latitude)) && (CGFloat(coordinate.latitude) <= xf)
-		let containsY = (y0 <= CGFloat(coordinate.longitude)) && (CGFloat(coordinate.longitude) <= yf)
+		let containsX = (x0 <= Float(coordinate.latitude)) && (Float(coordinate.latitude) <= xf)
+		let containsY = (y0 <= Float(coordinate.longitude)) && (Float(coordinate.longitude) <= yf)
 		return (containsX && containsY)
 	}
 
